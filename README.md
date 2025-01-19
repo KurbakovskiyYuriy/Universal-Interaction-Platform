@@ -4,6 +4,7 @@ The instructions include necessary commands, code, and explanations for setting 
 The backend handles user authentication, messaging, and a simple newsfeed.
 -----------------------------------------
 ### Code:app.py
+```python
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List
@@ -41,6 +42,7 @@ class Post(BaseModel):
     content: str
 
 # Routes
+
 @app.post("/signup/")
 def signup(user: User):
     conn = sqlite3.connect(DATABASE)
@@ -99,5 +101,7 @@ def get_newsfeed():
     posts = cursor.fetchall()
     conn.close()
     return [{"author": p[0], "content": p[1]} for p in posts]
+```
+
 
 
