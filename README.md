@@ -222,6 +222,18 @@ const App = () => {
 
 export default App;
 ```
+### Commands to Set Up and Run the Frontend
+1.Create a React app:
+
+npx create-react-app frontend
+
+2.Replace src/App.js with the code above.
+
+3.Run the React development server:
+
+npm start
+
+The frontend will be available at http://localhost:3000.
 
 
 
